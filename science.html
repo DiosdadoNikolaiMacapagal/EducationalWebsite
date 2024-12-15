@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science | EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #eaf2ff, #f8f8ff);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #0033a0, #0055d4);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+         header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            filter: brightness(65%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 50, 0.7);
+            border-radius: 12px;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text button {
+            background: #ffd700;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero-text button:hover {
+            background: #e6c300;
+            transform: scale(1.1);
+        }
+
+        .content {
+            padding: 2rem 5%;
+            background: linear-gradient(to bottom, #ffffff, #eaf2ff);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #0033a0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .content article {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .content h3 {
+            font-size: 1.6rem;
+            margin: 1rem;
+            color: #0033a0;
+        }
+
+        .content p {
+            margin: 0 1rem 1rem;
+        }
+
+        .content a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background: #0033a0;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .content a:hover {
+            background: #002080;
+        }
+
+        .interactive-section {
+            padding: 2rem 5%;
+            background: #f9f9f9;
+            margin-top: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .interactive-section h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0033a0;
+            font-size: 1.8rem;
+        }
+
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .interactive-buttons button {
+            background: #0033a0;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .interactive-buttons button:hover {
+            background: #002080;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e6c300;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="img/sc2.jpg" alt="Explore Science">
+        <div class="hero-text">
+            <h2>Science</h2>
+            <p>Unlock the mysteries of the universe and the wonders of science.</p>
+        </div>
+    </section>
+
+    <section class="content" id="mainContent">
+        <h2>Science Articles</h2>
+
+        <article>
+            <img src="img/science1logo.png" alt="Space Exploration">
+            <h3>The Future of Space Exploration</h3>
+            <p>Discover the exciting advancements in space technology and what lies ahead for humanity among the stars.</p>
+            <a href="space-exploration.html">Read More</a>
+        </article>
+
+        <article>
+            <img src="img/science2logo.jpg" alt="Climate Change">
+            <h3>Understanding Climate Change</h3>
+            <p>Learn the science behind climate change and its impact on our planet and ecosystems.</p>
+            <a href="climate-change.html">Read More</a>
+        </article>
+
+        <article>
+            <img src="img/science3logo.jpg" alt="Medical Breakthroughs">
+            <h3>Medical Breakthroughs of the 21st Century</h3>
+            <p>Explore how cutting-edge research is shaping the future of healthcare and saving lives.</p>
+            <a href="medical-breakthroughs.html">Read More</a>
+        </article>
+    </section>
+
+    <section class="interactive-section" id="interactiveSection">
+        <h3>What do you want to explore next?</h3>
+        <div class="interactive-buttons">
+            <button onclick="window.location.href='physics.html'">Physics</button>
+            <button onclick="window.location.href='chemistry.html'">Chemistry</button> 
+            <button onclick="window.location.href='biology.html'">Biology</button> 
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+    
+</body>
+</html>

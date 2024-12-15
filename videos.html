@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Videos | EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        
+        header {
+            position: sticky;
+            top: 0;
+            background: #d32f2f;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+         header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffccbc;
+        }
+
+       
+        .hero {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(to bottom, #d32f2f, #b71c1c);
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        
+        section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h3 {
+            font-size: 1.8rem;
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            max-height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+       
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #d32f2f;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffccbc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ffab91;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+            <a href="science.html">Science</a>
+            <a href="nature.html">Nature</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Explore Videos</h2>
+        <p>Dive into engaging videos that bring knowledge and excitement to life!</p>
+    </section>
+
+
+    <section>
+        <h3>Nature</h3>
+        <div class="video-grid">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/-JP-zoBLyWE" title="Watch an Endangered Philippine Eagle Chick Grow Up"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/S9atRW1DgbQ" title="World's Smallest Wild Dog "></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/GjPIvvxIQME" title="Cute Pika Steals Food From Neighbours"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/k2kiyWu_XNc" title="Arctic Fox Love Story | Incredible Animal Journeys | National Geographic"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/lBBeomQYTZU" title="Single Kestrel Parent Raises Six Chicks | The Dodo"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/d_FEaFgJyfA" title="Experiment! How Does An Owl Fly So Silently? | Super Powered Owls | BBC"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/7wKu13wmHog" title="Kung Fu Mantis Vs Jumping Spider | Life Story | BBC"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/N_WlgFudDNg" title="Fire Ants Build a Living Raft | A Perfect Planet | BBC Earth"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/bK91vC3gYt0" title="The Nature of Nature | National Geographic"></iframe>
+        </div>
+        </div>
+    </section>
+
+
+    
+    <section>
+        <h3>Science</h3>
+        <div class="video-grid">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/HdPzOWlLrbE" title="Origins of the Universe 101"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/libKVRa01L8" title="Solar System 101"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/Hz2F_S3Tl0Y" title="I Jumped From Space (World Record Supersonic Freefall)"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/Ei-TcECJVXU" title="Uncovering the Secrets of the International Space Station (Full Episode) | Superstructures "></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/AaZ_RSt0KP8" title="The Universe is Hostile to Computers"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/3Illx0WkCxU" title="How Did The Universe Begin?"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/34OJXQeIn64" title="What Is Beyond Edge Of The Universe?"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/pSHVbLPWA28" title="How Big is The Universe?"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/KXhJDPu0G-E" title="If light has no mass, why is it affected by gravity? General Relativity Theory"></iframe>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Politics</h3>
+        <div class="video-grid">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/BShvYeyMm_Y" title="How America became a superpower"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/kkcAJIfPXWY" title="Martial Law Explained: Inside South Korea's Political Crisis"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/yw8a8n7ZAZg" title="Why the US has so many Filipino nurses"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/aPZoSUwK-NM" title="Insurgents in Syria advance towards Damascus | Power & Politics "></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/n1ffwhx10ik" title="WATCH: Political analyst Edmund Tayao on House-VP Duterte stand-off, VP 'kill threat' vs Marcos |ANC"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/JA-_BD9cHow" title="Why the Philippines' Government is at War With Itself"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/1ZKBaRsP1gY" title="The rise of Xi Jinping, explained"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/8kj8UcCFcX0" title="Martial law: How South Korean politics spun out of control | About That"></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/9qRxNYuR2c4" title="Dictator's Dilemma (Full Episode) | North Korea: Inside the Mind of a Dictator "></iframe>
+        </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+</div>
+
+</body>
+</html>

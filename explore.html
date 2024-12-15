@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the Wonders of the World | EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #eceff1, #ffffff);
+            color: #333;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #5c6bc0, #3949ab);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+         header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #bbdefb;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(to bottom, #5c6bc0, #3949ab);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 2rem;
+            gap: 1rem;
+            margin: 2rem auto;
+            max-width: 90%;
+        }
+
+        .carousel-item {
+            flex: 0 0 300px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-info {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .fact-section {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .fact-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .fact-section p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #3949ab;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #bbdefb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #e3f2fd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Explore the Wonders of the World</h2>
+        <p>Discover breathtaking landmarks, natural wonders, and incredible sites around the globe.</p>
+    </section>
+
+    <section class="carousel" id="carousel">
+        <div class="carousel-item" onclick="fetchFunFact('Grand Canyon')">
+            <img src="img/explo1.jpg" alt="Grand Canyon">
+            <div class="carousel-info">Grand Canyon, USA</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Machu Picchu')">
+            <img src="img/explo2.jpg" alt="Machu Picchu"> 
+            <div class="carousel-info">Machu Picchu, Peru</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Great Wall of China')">
+            <img src="img/explo3.jpg" alt="Great Wall of China">
+            <div class="carousel-info">Great Wall, China</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Aurora Borealis')">
+            <img src="img/explo4.jpg" alt="Aurora Borealis">
+            <div class="carousel-info">Aurora Borealis, Iceland</div>
+        </div>
+    </section>
+    
+    <section class="carousel" id="carousel">
+        <div class="carousel-item" onclick="fetchFunFact('Eiffel Tower')">
+            <img src="img/explo5.jpg" alt="Eiffel Tower">
+            <div class="carousel-info">Eiffel Tower, France</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Colosseum')">
+            <img src="img/explo6.jpg" alt="Colosseum"> 
+            <div class="carousel-info">Colosseum, Italy</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('The Great Pyramid of Giza')">
+            <img src="img/explo7.jpg" alt="The Great Pyramid of Giza ">
+            <div class="carousel-info">The Great Pyramid of Giza, Egypt</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Moai')">
+            <img src="img/explo8.jpg" alt="Moai ">
+            <div class="carousel-info">Moai, Chile</div>
+        </div>
+    </section>
+
+    <section class="carousel" id="carousel">
+        <div class="carousel-item" onclick="fetchFunFact('Sagrada Família')">
+            <img src="img/explo9.jpg" alt="Sagrada Família">
+            <div class="carousel-info">Sagrada Família, Spain</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Mount Fuji')">
+            <img src="img/explo10.jpg" alt="Mount Fuji"> 
+            <div class="carousel-info">Mount Fuji, Japan</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Christ The Redeemer')">
+            <img src="img/explo11.jpg" alt="Christ The Redeemer">
+            <div class="carousel-info">Christ The Redeemer, Brazil</div>
+        </div>
+        <div class="carousel-item" onclick="fetchFunFact('Louvre Museum')">
+            <img src="img/explo12.jpg" alt="Louvre Museum ">
+            <div class="carousel-info">Louvre Museum, France</div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+
+</body>
+</html>

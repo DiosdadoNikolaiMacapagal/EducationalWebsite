@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate and Earth - EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f4f8fb;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #4CAF50, #388E3C);
+            color: #fff;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+            header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            position: relative;
+            height: 600px;
+            background: url('img/the3-3.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .hero p {
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero button {
+            margin-top: 2rem;
+            background: #ffcc00;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #e6b800;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            padding: 3rem 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        main h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .content img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .impact-section {
+            margin-top: 3rem;
+        }
+
+        .impact-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .impact-card {
+            background: linear-gradient(to bottom, #e0f7fa, #fff);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .impact-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .impact-card i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        .impact-card h3 {
+            color: #4CAF50;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffcc00;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e6b800;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Climate and Earth</h2>
+            <p>Understand the impacts of climate change and the importance of preserving our planet.</p>
+            <button onclick="scrollToContent()">Learn More</button>
+        </div>
+    </section>
+
+    <main>
+        <h2>Impact of Climate Change</h2>
+        <div class="content">
+            <img src="img/the3-3.jpg" alt="Climate and Earth">
+            <p>
+                Climate change impacts our society in many different ways. Drought can harm food production and human health. Flooding can lead to spread of disease, death, and damage ecosystems and infrastructure. Human health issues that result from drought, flooding, and other weather conditions increase the death rate, change food availability, and limit how much a worker can get done, and ultimately the productivity of our economy. Climate change affects everyone, but the impacts are uneven across the country and around the world. Even within one community, climate change can affect one neighborhood or person more than another. 
+            </p>
+        </div>
+
+        <div class="impact-section">
+            <h2>Why It Matters</h2>
+            <div class="impact-cards">
+                <div class="impact-card">
+                    <i class="fas fa-water"></i>
+                    <h3>Rising Sea Levels</h3>
+                    <p>Melting glaciers contribute to rising sea levels, threatening coastal communities and ecosystems.</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Loss of Biodiversity</h3>
+                    <p>Climate change disrupts habitats, leading to the extinction of many plant and animal species.</p>
+                </div>
+                <div class="impact-card">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>Global Temperatures</h3>
+                    <p>Rising global temperatures intensify droughts, wildfires, and extreme weather events.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f4f4f9, #e9eff5);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+             header {
+                position: sticky;
+                top: 0;
+                background: linear-gradient(to right, #0073e6, #005bb5);
+                color: #fff;
+                padding: 1rem 2rem;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between; 
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+            header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+
+            header h1 {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0 1rem;
+                font-size: 1rem;
+                transition: color 0.3s;
+                font-weight: 600;
+            }
+
+            nav a:hover {
+                color: #ffcc00;
+            }
+
+
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            filter: brightness(70%);
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 12px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero-text h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text button {
+            background: #ffcc00;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .hero-text button:hover {
+            background: #e6b800;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 5%;
+            margin-top: 2rem;
+        }
+
+        .content article {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            margin: 1rem;
+            color: #0073e6;
+        }
+
+        .content p {
+            margin: 0 1rem 1.5rem;
+        }
+
+        .content a {
+            display: block;
+            text-align: center;
+            margin: 1rem;
+            color: #0073e6;
+            font-weight: bold;
+        }
+
+        .latest-shows {
+            padding: 2rem 5%;
+            background: linear-gradient(to right, #0073e6, #005bb5);
+            color: #fff;
+            margin-top: 2rem;
+            border-radius: 12px;
+        }
+
+        .latest-shows h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .shows-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .show {
+            text-align: center;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .show:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .show img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .show .category {
+            font-size: 0.9rem;
+            color: #0073e6;
+            margin: 0.5rem 0;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffcc00;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="img/background1.png" alt="Explore the Wonders">
+        <div class="hero-text">
+            <h2>Explore the Wonders of Our Planet</h2>
+            <p>Journey through the marvels of nature and science with stunning visuals and insights.</p>
+        </div>
+    </section>
+
+    <section class="content">
+        <article>
+            <img src="img/the3-1.webp" alt="Amazing Wildlife">
+            <h3>Amazing Wildlife</h3>
+            <p>Discover the fascinating world of wildlife, from the smallest insects to the largest mammals.</p>
+            <a href="amazing-wildlife.html">Read More</a>
+        </article>
+        <article>
+            <img src="img/climate1.jpg" alt="Climate and Earth">
+            <h3>Climate and Earth</h3>
+            <p>Understand the impacts of climate change and the importance of preserving our planet.</p>
+            <a href="climate-earth.html">Read More</a>
+        </article>
+        <article>
+            <img src="img/ocean1.jpg" alt="Ocean Mysteries">
+            <h3>Ocean Mysteries</h3>
+            <p>Delve into the deep oceans and uncover the secrets of underwater ecosystems.</p>
+            <a href="ocean-mysteries.html">Read More</a>
+        </article>
+    </section>
+
+    <section class="latest-shows">
+        <h2>Latest Articles</h2>
+        <div class="shows-container">
+            <div class="show">
+                <img src="img/index1uni.jpg" alt="science">
+                <p class="category">Science</p>
+                <h3><a href="universe.html">Universe</a></h3>
+            </div>
+            <div class="show">
+                <img src="img/cul1.jpg" alt="cultural">
+                <p class="category">People</p>
+                <h3><a href="culture.html">Culture</a></h3>
+            </div>
+            <div class="show">
+                <img src="img/poli1.jpg" alt="cultural">
+                <p class="category">Politics</p>
+                <h3><a href="power.html">Power</a></h3>
+            </div>
+            <div class="show">
+                <img src="img/infla1.jpg" alt="cultural">
+                <p class="category">Finance</p>
+                <h3><a href="inflation.html">Inflation</a></h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

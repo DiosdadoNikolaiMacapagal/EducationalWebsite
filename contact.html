@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Educko</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #0073e6;
+            color: white;
+            padding: 1rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+         header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;  
+        }
+
+        nav a:hover {
+            color: inherit;  
+        }
+
+        .content {
+            padding: 5rem 5% 3rem; 
+            margin-top: -2rem; 
+            background: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            z-index: 10;
+        }
+
+        .content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            color: #0073e6;
+            font-weight: 700;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .form-container form {
+            flex: 1;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container form input, .form-container form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-container form button {
+            padding: 1rem;
+            background: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-container form button:hover {
+            background: #005bb5;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0073e6;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info .icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: #0073e6;
+        }
+
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer a {
+            color: #ffcc00;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, feel free to reach out to us using the form below or through our contact information.</p>
+
+        <div class="form-container">
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt icon"></i> City Cebu., Cebu City</p>
+                <p><i class="fas fa-phone icon"></i> 09493511116 </p>
+                <p><i class="fas fa-envelope icon"></i> educko@gmail.com</p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Educko. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+   
+
+</body>
+</html>
+

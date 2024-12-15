@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature | EduckoPH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f0fff4, #f4f4f9);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(to right, #2b9348, #206a39);
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .logo-container {
+                display: flex;
+                align-items: center;
+            }
+
+         header .logo {
+                width: 60px;  
+                height: auto;
+                margin-right: 10px;  
+            }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text button {
+    background: #ffcc00;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.hero-text button:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+}
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content {
+            padding: 2rem 5%;
+            background: linear-gradient(to bottom, #ffffff, #f0fdf0);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #2b9348;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .content article {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .content article:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .content img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .content h3 {
+            font-size: 1.6rem;
+            margin: 1rem;
+            color: #2b9348;
+        }
+
+        .content p {
+            margin: 0 1rem 1rem;
+        }
+
+        .content a {
+            display: inline-block;
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            background: #2b9348;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .content a:hover {
+            background: #206a39;
+        }
+
+        .interactive-section {
+            padding: 2rem 5%;
+            background: #f9f9f9;
+            margin-top: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .interactive-section h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #2b9348;
+            font-size: 1.8rem;
+        }
+
+        .interactive-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .interactive-buttons button {
+            background: #2b9348;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .interactive-buttons button:hover {
+            background: #206a39;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #ffcc00;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/educkologo.png" alt="Educko Logo" class="logo">
+            <h1>Educko</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="nature.html">Nature</a>
+            <a href="science.html">Science</a>
+            <a href="explore.html">Explore</a>
+            <a href="videos.html">Videos</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="img/nt1.jpg" alt="Explore Nature">
+        <div class="hero-text">
+            <h2>Nature</h2>
+            <p>Discover the breathtaking beauty of the natural world.</p>
+        </div>
+    </section>
+
+    <section class="content" id="mainContent">
+        <h2>Nature Articles</h2>
+
+        <article>
+            <img src="img/nature1logo.png" alt="Rainforests">
+            <h3>The Importance of Rainforests</h3>
+            <p>Rainforests are vital ecosystems that support biodiversity and regulate the climate. Learn why they must be protected.</p>
+            <a href="rainforests.html">Read More</a>
+        </article>
+
+        <article>
+            <img src="img/naturelogo2.jpg" alt="Wildlife Habitats">
+            <h3>Wildlife Habitats in Peril</h3>
+            <p>Habitat destruction, hunting to extinction, a thriving illegal trade in threatened species, mass slaughter of wildlife.</p>
+            <a href="wildlife-habitats.html">Read More</a>
+        </article>
+
+        <article>
+            <img src="img/nature3logo.jpg" alt="Coral Reefs">
+            <h3>Coral Reefs: Underwater Wonders</h3>
+            <p>Coral reefs are teeming with life but are under threat from climate change and pollution. Learn how they can be saved.</p>
+            <a href="coral-reefs.html">Read More</a>
+        </article>
+    </section>
+
+    <section class="interactive-section" id="interactiveSection">
+        <h3>What do you want to learn next?</h3>
+        <div class="interactive-buttons">
+            <button onclick="window.location.href='forest-ecosystems.html'">Forest Ecosystems</button>
+            <button onclick="window.location.href='marine-life.html'">Marine Life</button>
+            <button onclick="window.location.href='endangered-species.html'">Endangered Species</button>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2024 Educko | <a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+
+  
+</body>
+</html>
